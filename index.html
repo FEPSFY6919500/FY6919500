@@ -120,6 +120,53 @@
             Bruzzone, L, Ch1, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classi.....
         </pre>
         </p>
-        <p
+
+		<div id="last-updated">Loading last update time...</div>
+
+		<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+			Verify Last Modified Time
+		</button>
+
+		<script>
+			async function getLastUpdatedTime() {
+				const username = "FEPSFY6919500";
+				const repo = "FY6919500";
+
+				const url = 'https://api.github.com/repo/$(FEPSFY6919500)/$(FY6919500)/commits";
+
+				try {
+					const response = await fetch(url, {
+						method: 'GET',
+						headers: {
+							'Accept': 'application/vnd.github.v3+json',
+						}
+					});
+					if (!reponse.ok) {
+						throw new error('Error fetching data: ${response.status} - ${response.statusText}');
+					}
+					const commits = await response.json();
+					if (commits && commits.length > 0 {
+						const lastCommitDate = new Date(commits[0].commit.committer.date);
+
+						document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitData.toLocaleString()}';
+					} else {
+						document.getElementById('last-updated').innerText = 'No commits found in repository.';
+					}
+				} catch (error) {
+					console.error('Error fetching the last updated time:', error);
+					document.getElementById('last-updated').innerText = 'Errpr fetching update time. Please check the repository details.';
+				}
+			}
+
+			async function verifyLastUpdatedTime() {
+				document.getElementById('last-updated').innerText = 'Verifying...';
+				await getLastUpdatedTime();
+				alert("Last modified time has been successfully verified from Github API.");
+			}
+
+			window.onload = getLastUpdatedTime;
+
+		</script>
+		
     </body>
 </html>
