@@ -1,38 +1,125 @@
 <!DOCTYPE html>
+
 <html>
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-
-<body>
-<div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
-
-<script>
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-
-// Set Data
-var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per day'],
-  [‘Work’, 8],
-  [‘Sleep’, 8],
-  [‘Eat’, 2],
-  [‘Study’, 4],
-  [‘Exercise’, 2]
-]);
-
-// Set Options
-var options = {
-  title:'My Daily Activities'
-};
-
-// Draw
-var chart = new google.visualization.PieChart(document.getElementById('myChart'));
-chart.draw(data, options);
-
-}
-</script>
-
-</body>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .mySlides {display:none;}
+            p {
+                font-family: arial, sans-serif;
+                margin-left: 50px;
+            }
+         	table {
+            	font-family: arial, sans serif;
+                border-collapse: collapse;
+                width: 30%;
+                }
+            td, th {
+            	border: 1px solid black;
+                text-align: left;
+                padding: 8px;
+                }
+            tr:nth-child(even) {
+            	background-color: #dddddd;
+                }
+            
+            
+        </style>
+        <img src="WebBanner.png" "alt="Banner" width="1200" height="300">
+    </head>
+    <body style="background-color:#FFFFFF;margin-left:50px;">
+        <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+        <h2>Student URN: 123456</h2>
+        
+        <table>
+        	<tr>
+        		<th><h3>Table of contents</h3></th>
+        	</tr>
+        	<tr>
+        		<td><a href="#Abstract">Abstract</td>
+        	</tr>
+        	<tr>
+        		<td><a href="#Introduction">Introduction</td>
+        	</tr>
+        	<tr>
+        		<td><a href="#Analysis and discussion">Analysis and discussion</td>
+        	</tr>
+        	<tr>
+        		<td><a href="#References">References</td>
+        	</tr>
+        </table>
+        
+        <hr>
+        <h3 id="Abstract">Abstract</h3>
+        <p>
+            This paper presents a novel adaptive active learning strategy. The most accurate 
+            classification model from a heterogenous classifier pool is selected at each learning epoch.
+            Our goal is to achieve greater incremental improvement in accuracy, compared to using a single 
+            type of classification model throughout the process. The strategy is evaluated on benchmark data sets.
+            We further consider an application to texture classification problems in sonar mosaic imagery and#
+            compare it with non-adaptive active learning and traditional machine learning approaches. Our 
+            results show that.We conclude that..
+        </p>
+        <h3 id="Introduction">Introduction</h3>
+        <p class="ex1">
+            Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
+            intelligent machine through the interaction of an oracle with the machine system, over a sequence of
+            learning epochs. A distinctive component in an active system is the querying strategy, used to sample
+                candidate training instances from a pool and evaluate them for informativeness, i.e., their potential
+                to improve the classification model. Various strategies have been proposed including; Query by
+                Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty
+                sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller,
+                2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are
+                presented for labeling, to a machine (database) or human oracle that has knowledge of the class
+                labels. After adding the newly labeled instances to the current training set, a revised model is
+                subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of
+                learning at each epoch. The process is continued until some stopping criterion has been met, such as
+                reaching a stage where information from the selected instances is contrary to the model, causing the
+                classifier confidence to drop, as in Vlachos (2001)
+        </p>
+        <h2 id="Analysis and discussion">Analysis and discussion</h2>
+        
+		<caption>Bridge deck repair durability is the subject of much recent research such as in  <a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al
+(2023).</a> Table 1: Data on cost and lifespan of bridge repairs</caption>
+        <table>
+        	<tr>
+        		<th><h3>£ Cost of repairs</h3></th>
+                <th><h3>Lifespan of repairs (years)</h3></th>
+        	</tr>
+        	<tr>
+        		<td><a>0.7 m</td>
+                <td><a>2</td>
+        	</tr>
+        	<tr>
+        		<td><a>3.3 m</td>
+                <td><a>4</td>
+        	</tr>
+        	<tr>
+        		<td><a>2.6 m</td>
+                <td><a>5</td>
+        	</tr>
+        	<tr>
+        		<td><a>17.4 m</td>
+                <td><a>7</td>
+        	</tr>
+            <tr>
+        		<td><a>8.8 m</td>
+                <td><a>9</td>
+        	</tr>
+        </table>        
+        
+        <h2 id="References">References</h2
+        <p>
+        <pre>
+        Angluin, D (1988), Queries and concept learning. Machine learning 2, (4), 319-342.
+            
+            Brinker, K (2003), Incorporating Diversit in Active Learning with Support Vector Machines,
+            Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003).
+            
+            Bruzzone, L, Ch1, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classi.....
+        </pre>
+        </p>
+        <p
+    </body>
 </html>
-
